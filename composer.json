@@ -1,7 +1,7 @@
 {
     "name": "ballen/gravel",
     "version": "1.0.0",
-    "description": "Geploy (Git Deploy) is a PHP library to be used to aid application deployment from git repositories.",
+    "description": "A simple PHP Gravatar.com library enabling developers to easily access, display and manipulate user avatars in their applications.",
     "type": "library",
     "keywords": ["gravatar", "avatar"],
     "license": "MIT",
