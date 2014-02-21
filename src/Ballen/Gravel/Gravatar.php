@@ -1,32 +1,30 @@
 <?php
 
+namespace Ballen\Gravel;
+
 /**
  * Gravel
  *
- * This class is a simple Gravatar library, compatible with Composer, this
- * library enables developers to easily access display and manipulate
- * Gravatar.com avatars in their applications.
+ * Gravel is a PHP library which provides easy access to get and display Gravatars.
  *
- * @author bobbyallen.uk@gmail.com (Bobby Allen)
- * @version 1.0.1
+ * @author ballen@bobbyallen.me (Bobby Allen)
+ * @version 1.1.0
  * @license http://opensource.org/licenses/MIT
  * @link https://github.com/bobsta63/gravel
  * @link http://www.bobbyallen.me
  *
  */
-
-namespace Ballen\Gravel;
-
 class Gravatar
 {
-    /**
-     * The standard 'HTTP' URL to gravatar.
-     */
 
+    /**
+     * *
+     * The standard 'HTTP' (non-secure) URL to gravatar.com.
+     */
     const HTTP_GRAVATAR_URL = 'http://www.gravatar.com/';
 
     /**
-     * The secure 'HTTPS' URL to gravatar.
+     * The secure 'HTTPS' URL to gravatar.com.
      */
     const HTTPS_GRAVATAR_URL = 'https://secure.gravatar.com/';
 
@@ -62,7 +60,7 @@ class Gravatar
     private $secure = false;
 
     /**
-     * Stanard constructor.
+     * Class constructor.
      */
     public function __construct()
     {
@@ -81,16 +79,18 @@ class Gravatar
     /**
      * Set sthe email address for the person.
      * @param string $email The Email address of the Gravatar account.
+     * @return \Ballen\Gravel\Gravatar
      */
     public function setEmail($email)
     {
-        $this->email = (string) strtolower($email);
+        $this->email = (string) trim(strtolower($email));
         return $this;
     }
 
     /**
      * Set the avatar size you would like to get back.
      * @param int $size The size of the Gravatar to get back. (Default is 120)
+     * @return \Ballen\Gravel\Gravatar
      */
     public function setSize($size = 120)
     {
@@ -111,6 +111,7 @@ class Gravatar
      * 'retro'    : awesome generated, 8-bit arcade-style pixelated faces
      * 'blank'    : a transparent PNG image (border added to HTML below for demonstration purposes)
      * @param string $option The prefix of the default avatar to return if no valid Gravatar is found for the supplied email address.
+     * @return \Ballen\Gravel\Gravatar
      */
     public function setDefaultAvatar($option)
     {
@@ -126,6 +127,7 @@ class Gravatar
      * 'r' : may contain such things as harsh profanity, intense violence, nudity, or hard drug use.
      * 'x' : may contain hardcore sexual imagery or extremely disturbing violence.
      * @param string $rating
+     * @return \Ballen\Gravel\Gravatar
      */
     public function setRating($rating)
     {
@@ -135,6 +137,7 @@ class Gravatar
 
     /**
      * Set the protocol to be used for the image URL to HTTPS.
+     * @return \Ballen\Gravel\Gravatar
      */
     public function setUseHTTPS()
     {
@@ -144,19 +147,19 @@ class Gravatar
 
     /**
      * Set the protocol to be used for the image URL to HTTP.
+     * @return \Ballen\Gravel\Gravatar
      */
     public function setUseHTTP()
     {
         $this->secure = (bool) false;
         return $this;
     }
-
+    
     /**
-     * Builds and returns the final image URL to the user's Gravatar.
+     * Builds and returns the final Gravatar URL.
      * @return string The URL to the Gravatar Image.
      */
-    public function buildImageURL()
-    {
+    public function buildGravatarUrl(){
         if ($this->secure == true) {
             $first_segment = self::HTTPS_GRAVATAR_URL;
         } else {
@@ -168,6 +171,15 @@ class Gravatar
             $rating = '';
         }
         return (string) '' . $first_segment . 'avatar/' . $this->generateAddressHash() . '?s=' . $this->size . '&r=' . $this->rating . '&d=' . $this->default_avatar . '' . $rating;
+    }
+
+    /**
+     * @deprecated since 1.1.0
+     * @return string The URL to the Gravatar Image.
+     */
+    public function buildImageURL()
+    {
+        return $this->buildGravatarUrl();
     }
 
 }

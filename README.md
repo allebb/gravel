@@ -1,17 +1,6 @@
 Gravel
 ======
 
-Gravel is a simple PHP Gravatar.com library enabling developers to easily access, display and manipulate user avatars in their applications.
+[Gravel](https://github.com/bobsta63/gravel) is a simple PHP library for [Gravatar.com](http://www.gravatar.com), it enables developers to easily access, display and manipulate user avatars (from Gravatar.com) in their applications.
 
-Gravel is written and maintained by Bobby Allen, licensed under the MIT license.
-
-License
--------
-The MIT License (MIT)
-Copyright (c) 2013 Bobby Allen <bobbyallen.uk@gmail.com>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Gravel is written and maintained by [Bobby Allen](http://bobbyallen.me), the library is licensed under the [MIT license](LICENSE.md).
