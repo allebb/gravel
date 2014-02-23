@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="generator" content="ApiGen 2.8.0" />
 
-	<title>Class Ballen\Gravel\Gravatar | Gravel</title>
+	<title>Class Ballen\Gravel\Facades\GravatarMapper | Gravel</title>
 
 	<script type="text/javascript" src="resources/combined.js?139574267"></script>
 	<script type="text/javascript" src="elementlist.js?2828504788"></script>
@@ -25,7 +25,7 @@
 						<ul>
 				<li class="active"><a href="namespace-Ballen.Gravel.html">Gravel<span></span></a>
 						<ul>
-				<li><a href="namespace-Ballen.Gravel.Facades.html">Facades</a>
+				<li class="active"><a href="namespace-Ballen.Gravel.Facades.html">Facades</a>
 						</li>
 							</ul></li></ul></li>
 			</ul>
@@ -37,8 +37,8 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-Ballen.Gravel.Gravatar.html">Gravatar</a></li>
-				<li><a href="class-Ballen.Gravel.GravelServiceProvider.html">GravelServiceProvider</a></li>
+				<li><a href="class-Ballen.Gravel.Facades.Gravatar.html">Gravatar</a></li>
+				<li class="active"><a href="class-Ballen.Gravel.Facades.GravatarMapper.html">GravatarMapper</a></li>
 			</ul>
 
 
@@ -66,7 +66,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="namespace-Ballen.Gravel.html" title="Summary of Ballen\Gravel"><span>Namespace</span></a>
+				<a href="namespace-Ballen.Gravel.Facades.html" title="Summary of Ballen\Gravel\Facades"><span>Namespace</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -81,15 +81,15 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class Gravatar</h1>
+	<h1>Class GravatarMapper</h1>
 
 
 	<div class="description">
 	
-<p>Gravel</p>
+<p>GravelMapper</p>
 
-<p>Gravel is a PHP library which provides easy access to get and display
-Gravatars.</p>
+<p>Gravatar Mapper provides a binding/class method aliases for Laravel to
+provide friendly syntax.</p>
 
 	</div>
 
@@ -104,7 +104,7 @@ Gravatars.</p>
 	<div class="info">
 		
 		
-		<b>Namespace:</b> <a href="namespace-Ballen.html">Ballen</a>\<a href="namespace-Ballen.Gravel.html">Gravel</a><br />
+		<b>Namespace:</b> <a href="namespace-Ballen.html">Ballen</a>\<a href="namespace-Ballen.Gravel.html">Gravel</a>\<a href="namespace-Ballen.Gravel.Facades.html">Facades</a><br />
 		
 
 				<b>License:</b>
@@ -118,7 +118,7 @@ Gravatars.</p>
 				<a href="https://github.com/bobsta63/gravel">https://github.com/bobsta63/gravel</a><br />
 				<b>Link:</b>
 				<a href="http://www.bobbyallen.me">http://www.bobbyallen.me</a><br />
-		<b>Located at</b> <a href="source-class-Ballen.Gravel.Gravatar.html#5-186" title="Go to source code">src/Gravatar.php</a><br />
+		<b>Located at</b> <a href="source-class-Ballen.Gravel.Facades.GravatarMapper.html#8-105" title="Go to source code">src/Facades/GravatarMapper.php</a><br />
 	</div>
 
 
@@ -136,18 +136,14 @@ Gravatars.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Ballen.Gravel.Gravatar.html#62-68" title="Go to source code">__construct</a>( )</code>
+		<code><a href="source-class-Ballen.Gravel.Facades.GravatarMapper.html#25-29" title="Go to source code">__construct</a>( )</code>
 
 		<div class="description short">
 			
-<p>Class constructor.</p>
-
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Class constructor.</p>
-
 
 
 
@@ -158,7 +154,7 @@ Gravatars.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="setEmail" id="_setEmail">
+	<tr data-order="make" id="_make">
 
 		<td class="attributes"><code>
 			 public 
@@ -168,25 +164,25 @@ Gravatars.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_setEmail">#</a>
-		<code><a href="source-class-Ballen.Gravel.Gravatar.html#79-88" title="Go to source code">setEmail</a>( <span>string <var>$email</var></span> )</code>
+		<a class="anchor" href="#_make">#</a>
+		<code><a href="source-class-Ballen.Gravel.Facades.GravatarMapper.html#31-39" title="Go to source code">make</a>( <span>string <var>$email</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Set sthe email address for the person.</p>
+<p>Make the gravatar with the supplied email address.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Set sthe email address for the person.</p>
+<p>Make the gravatar with the supplied email address.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$email</var></dt>
-					<dd><code>string</code><br>$email The Email address of the Gravatar account.</dd>
+					<dd><code>string</code><br>$email The email address for the Gravatar.</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -200,7 +196,7 @@ Gravatars.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="setSize" id="_setSize">
+	<tr data-order="size" id="_size">
 
 		<td class="attributes"><code>
 			 public 
@@ -210,25 +206,25 @@ Gravatars.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_setSize">#</a>
-		<code><a href="source-class-Ballen.Gravel.Gravatar.html#90-99" title="Go to source code">setSize</a>( <span>integer <var>$size</var> = <span class="php-num">120</span></span> )</code>
+		<a class="anchor" href="#_size">#</a>
+		<code><a href="source-class-Ballen.Gravel.Facades.GravatarMapper.html#41-49" title="Go to source code">size</a>( <span>integer <var>$size</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Set the avatar size you would like to get back.</p>
+<p>Set a custom gravatar size, default is 120px.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Set the avatar size you would like to get back.</p>
+<p>Set a custom gravatar size, default is 120px.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$size</var></dt>
-					<dd><code>integer</code><br>$size The size of the Gravatar to get back. (Default is 120)</dd>
+					<dd><code>integer</code><br>$size Gravatar image size</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -242,7 +238,7 @@ Gravatars.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="setDefaultAvatar" id="_setDefaultAvatar">
+	<tr data-order="defaultGravatar" id="_defaultGravatar">
 
 		<td class="attributes"><code>
 			 public 
@@ -252,8 +248,8 @@ Gravatars.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_setDefaultAvatar">#</a>
-		<code><a href="source-class-Ballen.Gravel.Gravatar.html#101-120" title="Go to source code">setDefaultAvatar</a>( <span>string <var>$option</var></span> )</code>
+		<a class="anchor" href="#_defaultGravatar">#</a>
+		<code><a href="source-class-Ballen.Gravel.Facades.GravatarMapper.html#51-69" title="Go to source code">defaultGravatar</a>( <span>string <var>$option</var></span> )</code>
 
 		<div class="description short">
 			
@@ -296,7 +292,7 @@ for the supplied email address.</dd>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="setRating" id="_setRating">
+	<tr data-order="rating" id="_rating">
 
 		<td class="attributes"><code>
 			 public 
@@ -306,8 +302,8 @@ for the supplied email address.</dd>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_setRating">#</a>
-		<code><a href="source-class-Ballen.Gravel.Gravatar.html#122-137" title="Go to source code">setRating</a>( <span>string <var>$rating</var></span> )</code>
+		<a class="anchor" href="#_rating">#</a>
+		<code><a href="source-class-Ballen.Gravel.Facades.GravatarMapper.html#71-85" title="Go to source code">rating</a>( <span>string <var>$rating</var></span> )</code>
 
 		<div class="description short">
 			
@@ -346,7 +342,7 @@ imagery or extremely disturbing violence.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="setUseHTTPS" id="_setUseHTTPS">
+	<tr data-order="https" id="_https">
 
 		<td class="attributes"><code>
 			 public 
@@ -356,18 +352,22 @@ imagery or extremely disturbing violence.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_setUseHTTPS">#</a>
-		<code><a href="source-class-Ballen.Gravel.Gravatar.html#139-147" title="Go to source code">setUseHTTPS</a>( )</code>
+		<a class="anchor" href="#_https">#</a>
+		<code><a href="source-class-Ballen.Gravel.Facades.GravatarMapper.html#87-94" title="Go to source code">https</a>( )</code>
 
 		<div class="description short">
 			
-<p>Set the protocol to be used for the image URL to HTTPS.</p>
+<p>Returns a HTTPS URL instead, ideal for sites that implement HTTPS and do not
+wish to trigger SSL warnings regarding 'some content on this page is not
+encrytped'.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Set the protocol to be used for the image URL to HTTPS.</p>
+<p>Returns a HTTPS URL instead, ideal for sites that implement HTTPS and do not
+wish to trigger SSL warnings regarding 'some content on this page is not
+encrytped'.</p>
 
 
 
@@ -383,44 +383,7 @@ imagery or extremely disturbing violence.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="setUseHTTP" id="_setUseHTTP">
-
-		<td class="attributes"><code>
-			 public 
-			<code><a href="class-Ballen.Gravel.Gravatar.html">Ballen\Gravel\Gravatar</a></code>
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_setUseHTTP">#</a>
-		<code><a href="source-class-Ballen.Gravel.Gravatar.html#149-157" title="Go to source code">setUseHTTP</a>( )</code>
-
-		<div class="description short">
-			
-<p>Set the protocol to be used for the image URL to HTTP.</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>Set the protocol to be used for the image URL to HTTP.</p>
-
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code><code><a href="class-Ballen.Gravel.Gravatar.html">Ballen\Gravel\Gravatar</a></code></code><br />
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="buildGravatarUrl" id="_buildGravatarUrl">
+	<tr data-order="get" id="_get">
 
 		<td class="attributes"><code>
 			 public 
@@ -430,8 +393,8 @@ imagery or extremely disturbing violence.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_buildGravatarUrl">#</a>
-		<code><a href="source-class-Ballen.Gravel.Gravatar.html#159-175" title="Go to source code">buildGravatarUrl</a>( )</code>
+		<a class="anchor" href="#_get">#</a>
+		<code><a href="source-class-Ballen.Gravel.Facades.GravatarMapper.html#96-103" title="Go to source code">get</a>( )</code>
 
 		<div class="description short">
 			
@@ -466,57 +429,6 @@ imagery or extremely disturbing violence.</p>
 
 
 
-	<table class="summary" id="constants">
-	<caption>Constants summary</caption>
-	<tr data-order="HTTP_GRAVATAR_URL" id="HTTP_GRAVATAR_URL">
-
-		<td class="attributes"><code>string</code></td>
-		<td class="name"><code>
-				<a href="source-class-Ballen.Gravel.Gravatar.html#20-24" title="Go to source code"><b>HTTP_GRAVATAR_URL</b></a>
-		</code></td>
-		<td class="value"><code><span class="php-quote">'http://www.gravatar.com/'</span></code></td>
-		<td class="description"><div>
-			<a href="#HTTP_GRAVATAR_URL" class="anchor">#</a>
-
-			<div class="description short">
-				
-<p>* The standard 'HTTP' (non-secure) URL to gravatar.com.</p>
-
-			</div>
-
-			<div class="description detailed hidden">
-				
-<p>* The standard 'HTTP' (non-secure) URL to gravatar.com.</p>
-
-
-			</div>
-		</div></td>
-	</tr>
-	<tr data-order="HTTPS_GRAVATAR_URL" id="HTTPS_GRAVATAR_URL">
-
-		<td class="attributes"><code>string</code></td>
-		<td class="name"><code>
-				<a href="source-class-Ballen.Gravel.Gravatar.html#26-29" title="Go to source code"><b>HTTPS_GRAVATAR_URL</b></a>
-		</code></td>
-		<td class="value"><code><span class="php-quote">'https://secure.gravatar.com/'</span></code></td>
-		<td class="description"><div>
-			<a href="#HTTPS_GRAVATAR_URL" class="anchor">#</a>
-
-			<div class="description short">
-				
-<p>The secure 'HTTPS' URL to gravatar.com.</p>
-
-			</div>
-
-			<div class="description detailed hidden">
-				
-<p>The secure 'HTTPS' URL to gravatar.com.</p>
-
-
-			</div>
-		</div></td>
-	</tr>
-	</table>
 
 
 
