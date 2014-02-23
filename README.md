@@ -18,7 +18,7 @@ Gravel is installable via. [Composer](http://getcomposer.org). Read further info
 ```
 Then install the package by running the `composer install` or `composer update` command.
 
-You can also manually download the latest version as a [zip]() or [tar.gz]() archive of the library from GitHub and 'include' the `Gravatar.php` script (library) and use it stand-alone if you wish.
+You can also manually download the latest version as a [zip](https://github.com/bobsta63/gravel/archive/master.zip) or [tar.gz](https://github.com/bobsta63/gravel/archive/master.tar.gz) archive of the library from GitHub and 'include' the `Gravatar.php` script (library) and use it stand-alone if you wish.
 
 It is however, recommended that you install it using Composer as you can keep this library up to date automatically updated as and when bug fixes and improvements are made etc.
 
@@ -54,8 +54,10 @@ $my_gravatar->setEmail('bobbyallen.uk@gmail.com')->setSize(200);
 
 /**
 * You can then call the generated image URL like so:-
+* 
+* <image src="<?php echo $my_gravatar->buildGravatarUrl(); ?>" alt="My avatar using Gravatar.com">
+*
 */
-<image src="<?php echo $my_gravatar->buildGravatarUrl(); ?>" alt="My avatar using Gravatar.com">
 ```
 
 ### Laravel 4 examples
