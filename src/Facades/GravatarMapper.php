@@ -16,10 +16,13 @@ use Ballen\Gravel\Gravatar as GravatarLib;
  * @link http://www.bobbyallen.me
  *
  */
-
 class GravatarMapper
 {
 
+    /**
+     * Instance container for Gravatar Library dependency injection.
+     * @var Ballen\Gravel\Gravatar
+     */
     private $gravatar;
 
     public function __construct()
@@ -35,7 +38,8 @@ class GravatarMapper
      */
     public function make($email)
     {
-        return $this->gravatar->setEmail($email);
+        $this->gravatar->setEmail($email);
+        return $this;
     }
 
     /**
@@ -45,7 +49,8 @@ class GravatarMapper
      */
     public function size($size)
     {
-        return $this->gravatar->setSize();
+        $this->gravatar->setSize($size);
+        return $this;
     }
 
     /**
@@ -65,10 +70,11 @@ class GravatarMapper
      */
     public function defaultGravatar($option)
     {
-        return $this->gravatar->setDefaultAvatar($option);
+        $this->gravatar->setDefaultAvatar($option);
+        return $this;
     }
 
-     /**
+    /**
      * Set the rating threshold, will not return a Gravatar unless its in this band.
      * Valid options are ('g' is default!)
      * 
@@ -81,7 +87,8 @@ class GravatarMapper
      */
     public function rating($rating)
     {
-        return $this->gravatar->setRating($rating);
+        $this->gravatar->setRating($rating);
+        return $this;
     }
 
     /**
@@ -90,7 +97,8 @@ class GravatarMapper
      */
     public function https()
     {
-       return $this->gravatar->setUseHTTPS();
+        $this->gravatar->setUseHTTPS();
+        return $this;
     }
 
     /**
@@ -99,7 +107,8 @@ class GravatarMapper
      */
     public function get()
     {
-        return $this->gravatar->buildGravatarUrl();
+        $this->gravatar->buildGravatarUrl();
+        return $this;
     }
 
 }
