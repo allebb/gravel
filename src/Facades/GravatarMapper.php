@@ -2,7 +2,7 @@
 
 namespace Ballen\Gravel\Facades;
 
-use Ballen\Gravel\Gravatar;
+use Ballen\Gravel\Gravatar as GravatarLib;
 
 /**
  * GravelMapper
@@ -24,7 +24,7 @@ class GravatarMapper
 
     public function __construct()
     {
-        $this->gravatar = new Gravatar;
+        $this->gravatar = new GravatarLib;
         $this->gravatar->setUseHTTP();
     }
 

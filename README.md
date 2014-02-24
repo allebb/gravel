@@ -11,33 +11,33 @@ Gravel is written and maintained by [Bobby Allen](http://bobbyallen.me), the lib
 
 ## Installation
 
-Gravel is installable via. [Composer](http://getcomposer.org). Read further information on how to install.
+Gravel is installable via. [Composer](http://getcomposer.org). To install using Composer add the following to your `composer.json` file under the `require` section:
 
 ```php
-"ballen/gravel": "dev-master",
+"ballen/gravel": "dev-master"
 ```
 Then install the package by running the `composer install` or `composer update` command.
 
-You can also manually download the latest version as a [zip](https://github.com/bobsta63/gravel/archive/master.zip) or [tar.gz](https://github.com/bobsta63/gravel/archive/master.tar.gz) archive of the library from GitHub and 'include' the `Gravatar.php` script (library) and use it stand-alone if you wish.
+You can also manually download the latest version as a [zip](https://github.com/bobsta63/gravel/archive/master.zip) or [tar.gz](https://github.com/bobsta63/gravel/archive/master.tar.gz) archive of the library from GitHub and 'include' the `Gravatar.php` script (library) and use it standalone if you wish.
 
 It is however, recommended that you install it using Composer as you can keep this library up to date automatically updated as and when bug fixes and improvements are made etc.
 
 ### Laravel 4 Integration
 
-Gravel has optional support for [Laravel](http://www.laravel.com) 4 and comes with a Service Provider and a Facade for easy integration.
+Gravel has optional support for [Laravel](http://www.laravel.com) 4.x and comes with a **Service Provider** and a **Facade** for easy integration.
 
 Open your Laravel application configuration file `app/config/app.php` and add the following lines.
 
 In the `$providers` array add the service providers for this package.
 
 ```php
-'Ballen\Gravel\GravatarServiceProvider',
+'Ballen\Gravel\GravelServiceProvider',
 ```
 
 Then add the facade of this package to the `$aliases` array.
 
 ```php
-'Gravatar' => 'Ballen\Gravel\Gravatar',
+'Gravatar' => 'Ballen\Gravel\Facades\Gravatar',
 ```
 
 The Gravatar package will now be autoloaded by the Laravel framework and use of the library is as simplified!
