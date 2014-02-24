@@ -107,8 +107,7 @@ class GravatarMapper
      */
     public function get()
     {
-        $this->gravatar->buildGravatarUrl();
-        return $this;
+        return $this->gravatar->buildGravatarUrl();
     }
 
 }
