@@ -71,7 +71,3 @@ $my_gravatar = Gravatar::make('bobbyallen.uk@gmail.com')->size(200)->get();
 
 return View::make('userprofile')->with('gravatar', $my_gravatar);
 ```
-
-## Documentation
-
-If you wish to see all of the avaliable methods, please see the [API docs](docs/index.html) which documents the methods.
