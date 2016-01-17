@@ -10,7 +10,6 @@ use Ballen\Gravel\Gravatar as GravatarLib;
  * Gravatar Mapper provides a binding/class method aliases for Laravel to provide friendly syntax.
  *
  * @author ballen@bobbyallen.me (Bobby Allen)
- * @version 1.1.0
  * @license http://opensource.org/licenses/MIT
  * @link https://github.com/bobsta63/gravel
  * @link http://www.bobbyallen.me
@@ -28,7 +27,7 @@ class GravatarMapper
     public function __construct()
     {
         $this->gravatar = new GravatarLib;
-        $this->gravatar->setUseHTTP();
+        $this->gravatar->setUseHTTPS();
     }
 
     /**
@@ -92,12 +91,16 @@ class GravatarMapper
     }
 
     /**
-     * Returns a HTTPS URL instead, ideal for sites that implement HTTPS and do not wish to trigger SSL warnings regarding 'some content on this page is not encrytped'.
+     * Returns a HTTPS formatted URL instead, ideal for sites that implement HTTPS and do not wish to trigger SSL warnings regarding 'some content on this page is not encrytped'.
+     * @param boolean $enable Retreive HTTPS formatted Gravatar links?
      * @return \Ballen\Gravel\Gravatar
      */
-    public function https()
+    public function https($enable = true)
     {
         $this->gravatar->setUseHTTPS();
+        if (!$enable) {
+            $this->gravatar->setUseHTTP();
+        }
         return $this;
     }
 
@@ -109,5 +112,4 @@ class GravatarMapper
     {
         return $this->gravatar->buildGravatarUrl();
     }
-
 }

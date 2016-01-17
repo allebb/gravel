@@ -8,7 +8,6 @@ namespace Ballen\Gravel;
  * Gravel is a PHP library which provides easy access to get and display Gravatars.
  *
  * @author ballen@bobbyallen.me (Bobby Allen)
- * @version 1.1.0
  * @license http://opensource.org/licenses/MIT
  * @link https://github.com/bobsta63/gravel
  * @link http://www.bobbyallen.me
@@ -55,16 +54,16 @@ class Gravatar
 
     /**
      * Enable Gravatar URL over HTTPS (good for sites using HTTPS!)
-     * @var bool Use the HTTPS protocol to display avatar images. (Default is HTTP)
+     * @var bool Use the HTTPS protocol to display avatar images. (Default is HTTPS)
      */
-    private $secure = false;
+    private $secure = true;
 
     /**
      * Class constructor.
      */
     public function __construct()
     {
-        // A placeholder for the constructor, not needed but good practice to put this in!
+        
     }
 
     /**
@@ -142,7 +141,7 @@ class Gravatar
      */
     public function setUseHTTPS()
     {
-        $this->secure = (bool) true;
+        $this->secure = true;
         return $this;
     }
 
@@ -152,15 +151,16 @@ class Gravatar
      */
     public function setUseHTTP()
     {
-        $this->secure = (bool) false;
+        $this->secure = false;
         return $this;
     }
-    
+
     /**
      * Builds and returns the final Gravatar URL.
      * @return string The URL to the Gravatar Image.
      */
-    public function buildGravatarUrl(){
+    public function buildGravatarUrl()
+    {
         if ($this->secure == true) {
             $first_segment = self::HTTPS_GRAVATAR_URL;
         } else {
@@ -171,7 +171,7 @@ class Gravatar
         } else {
             $rating = '';
         }
-        return (string) '' . $first_segment . 'avatar/' . $this->generateAddressHash() . '?s=' . $this->size . '&r=' . $this->rating . '&d=' . $this->default_avatar . '' . $rating;
+        return (string) $first_segment . 'avatar/' . $this->generateAddressHash() . '?s=' . $this->size . '&r=' . $this->rating . '&d=' . $this->default_avatar . '' . $rating;
     }
 
     /**
@@ -182,5 +182,4 @@ class Gravatar
     {
         return $this->buildGravatarUrl();
     }
-
 }

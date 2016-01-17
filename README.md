@@ -1,7 +1,7 @@
 Gravel
 ======
 
-[Gravel](https://github.com/bobsta63/gravel) is a simple PHP library for [Gravatar.com](http://www.gravatar.com), it enables developers to easily access, display and manipulate user avatars (from Gravatar.com) in their applications.
+[Gravel](https://github.com/bobsta63/gravel) is a simple PHP library for working with [Gravatar](http://www.gravatar.com) avatars.
 
 Gravel is written and maintained by [Bobby Allen](http://bobbyallen.me), the library is licensed under the [MIT license](LICENSE).
 
@@ -11,16 +11,20 @@ Gravel is written and maintained by [Bobby Allen](http://bobbyallen.me), the lib
 
 ## Installation
 
-Gravel is installable via. [Composer](http://getcomposer.org). To install using Composer add the following to your `composer.json` file under the `require` section:
+The recommended way of installing Gravel is via. [Composer](http://getcomposer.org). To install using Composer type the following command at the console:
+
+```shell
+composer require ballen/gravel
+```
+
+Alternately you can add it to your ``composer.json`` file manually in the `require` section like so:
 
 ```php
-"ballen/gravel": "dev-master"
+"ballen/gravel": "~1.0"
 ```
-Then install the package by running the `composer install` or `composer update` command.
+Then install the package by running the ``composer update ballen/gravel`` command.
 
 You can also manually download the latest version as a [zip](https://github.com/bobsta63/gravel/archive/master.zip) or [tar.gz](https://github.com/bobsta63/gravel/archive/master.tar.gz) archive of the library from GitHub and 'include' the `Gravatar.php` script (library) and use it standalone if you wish.
-
-It is however, recommended that you install it using Composer as you can keep this library up to date automatically updated as and when bug fixes and improvements are made etc.
 
 ### Laravel 4 Integration
 
@@ -67,7 +71,6 @@ As Laravel's syntax is clean and simple, I decided to implement a Laravel type s
 If you have added the Laravel Service Provider and Aliases as documented above, you can utilise the library like so:
 
 ```php
-$my_gravatar = Gravatar::make('bobbyallen.uk@gmail.com')->size(200)->get();
-
-return View::make('userprofile')->with('gravatar', $my_gravatar);
+return View::make('userprofile')
+    ->with('gravatar', Gravatar::make('bobbyallen.uk@gmail.com')->size(200)->get());
 ```

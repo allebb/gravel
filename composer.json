@@ -1,5 +1,6 @@
 {
     "name": "ballen/gravel",
+    "version": "1.2.0",
     "description": "Gravel is a PHP library which provides easy access to get and display Gravatars.",
     "keywords": ["gravatar", "avatar"],
     "type": "library",
