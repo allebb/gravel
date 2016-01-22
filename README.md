@@ -28,21 +28,16 @@ You can also manually download the latest version as a [zip](https://github.com/
 
 ### Laravel 4 and 5 Integration
 
-Gravel has optional support for [Laravel](http://www.laravel.com) 4.x and 5.x and comes with a **Service Provider** and a **Facade** for easy integration.
+Gravel has optional support for [Laravel](http://www.laravel.com) 4.x and 5.x and comes with a **Service Provider** which will register the **Facade** for easy integration.
 
 Open your Laravel application configuration file ``config/app.php`` (or ``app/config/app.php`` if you are using Laravel 4.x)and add the following lines.
 
 In the `$providers` array add the service providers for this package.
 
 ```php
-'Ballen\Gravel\GravelServiceProvider',
+Ballen\Gravel\GravelServiceProvider::class,
 ```
 
-Then add the facade of this package to the `$aliases` array.
-
-```php
-'Gravatar' => 'Ballen\Gravel\Facades\Gravatar',
-```
 
 The Gravatar package will now be autoloaded by the Laravel framework (via. Composer) and use of the library is as simple...
 
