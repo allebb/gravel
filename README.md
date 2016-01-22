@@ -26,11 +26,11 @@ Then install the package by running the ``composer update ballen/gravel`` comman
 
 You can also manually download the latest version as a [zip](https://github.com/bobsta63/gravel/archive/master.zip) or [tar.gz](https://github.com/bobsta63/gravel/archive/master.tar.gz) archive of the library from GitHub and 'include' the `Gravatar.php` script (library) and use it standalone if you wish.
 
-### Laravel 4 Integration
+### Laravel 4 and 5 Integration
 
-Gravel has optional support for [Laravel](http://www.laravel.com) 4.x and comes with a **Service Provider** and a **Facade** for easy integration.
+Gravel has optional support for [Laravel](http://www.laravel.com) 4.x and 5.x and comes with a **Service Provider** and a **Facade** for easy integration.
 
-Open your Laravel application configuration file `app/config/app.php` and add the following lines.
+Open your Laravel application configuration file ``config/app.php`` (or ``app/config/app.php`` if you are using Laravel 4.x)and add the following lines.
 
 In the `$providers` array add the service providers for this package.
 
@@ -44,7 +44,7 @@ Then add the facade of this package to the `$aliases` array.
 'Gravatar' => 'Ballen\Gravel\Facades\Gravatar',
 ```
 
-The Gravatar package will now be autoloaded by the Laravel framework and use of the library is as simplified!
+The Gravatar package will now be autoloaded by the Laravel framework (via. Composer) and use of the library is as simple...
 
 ## Example usage
 
@@ -59,18 +59,24 @@ $my_gravatar->setEmail('bobbyallen.uk@gmail.com')->setSize(200);
 /**
 * You can then call the generated image URL like so:-
 * 
-* <image src="<?php echo $my_gravatar->buildGravatarUrl(); ?>" alt="My avatar using Gravatar.com">
+* <image src="<?php echo $my_gravatar->buildGravatarUrl(); ?>">
 *
 */
 ```
 
-### Laravel 4 examples
+### Laravel example
 
-As Laravel's syntax is clean and simple, I decided to implement a Laravel type style (`make()`, `get()`) for the Laravel Facades therefore it should keep both the hardcore developers (setter and getter prefixed methods) as well as those developers that appreciate cleanly written method names!
+I decided to implement a Laravel type style (`make()`, `get()`) for the Laravel Facades therefore it should keep both the hardcore developers (setter and getter prefixed methods) as well as those developers that appreciate cleanly written method names!
 
 If you have added the Laravel Service Provider and Aliases as documented above, you can utilise the library like so:
 
 ```php
+# Laravel 4.x example
 return View::make('userprofile')
     ->with('gravatar', Gravatar::make('bobbyallen.uk@gmail.com')->size(200)->get());
+
+# Laravel 5.x example (using the view() helper method)
+return view('userprofile')
+    ->with('gravatar', Gravatar::make('bobbyallen.uk@gmail.com')->size(200)->get());
+
 ```
