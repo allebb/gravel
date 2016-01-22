@@ -1,7 +1,7 @@
 Gravel
 ======
 
-[Gravel](https://github.com/bobsta63/gravel) is a simple PHP library for working with [Gravatar](http://www.gravatar.com) avatars.
+[Gravel](https://github.com/bobsta63/gravel) is a PHP library for working with [Gravatar](http://www.gravatar.com) avatars.
 
 Gravel is written and maintained by [Bobby Allen](http://bobbyallen.me), the library is licensed under the [MIT license](LICENSE).
 
