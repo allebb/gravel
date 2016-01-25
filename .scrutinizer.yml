@@ -1,6 +1,9 @@
 filter:
-    paths: [src/*]
-    excluded_paths: [examples/*, tests/*]
+    paths:
+        - src/*
+    excluded_paths:
+        - examples/*
+        - tests/*
 checks:
     php: true
 tools:
