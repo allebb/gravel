@@ -1,5 +1,5 @@
 <?php
-require '../src/Ballen/Gravel/Gravatar.php';
+require '../src/Gravatar.php';
 use Ballen\Gravel\Gravatar;
 
 /**
