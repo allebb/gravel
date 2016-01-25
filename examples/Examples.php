@@ -29,7 +29,7 @@ echo sprintf('<img src="%s">', $example2->buildGravatarUrl());
  * An example of an invalid email address using a pre-set default Gravatar avatar:
  */
 $example3 = new Gravatar('fakeemail@bobbyallen.me');
-$example3->setDefaultAvatar(Gravatar::AVATAR_RETRO);
+$example3->setDefaultAvatar(Gravatar::DEFAULT_RETRO);
 echo sprintf('<img src="%s">', $example3->buildGravatarUrl());
 
 /**
