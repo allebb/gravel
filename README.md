@@ -48,15 +48,13 @@ If you have installed the library using Composer or manually you can (as long as
 ```php
 use Ballen\Gravel\Gravatar;
 
-$my_gravatar = new Gravatar;
-$my_gravatar->setEmail('bobbyallen.uk@gmail.com')->setSize(200);
+$avatar = new Gravatar('bobbyallen.uk@gmail.com');
+$avatar->setSize(200); // Optionally default a 200x200px avatar instead of the default 120x120px
 
 /**
-* You can then call the generated image URL like so:-
-* 
-* <image src="<?php echo $my_gravatar->buildGravatarUrl(); ?>">
-*
+* You can then obtain the avatar URL by using the buildGravatarUrl() method or utilsing the magic of the __toString() class method like so:
 */
+<image src="<?php echo $avatar; ?>">
 ```
 
 ### Laravel example
