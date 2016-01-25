@@ -11,7 +11,7 @@ Gravel is written and maintained by [Bobby Allen](http://bobbyallen.me), the lib
 
 ## Installation
 
-The recommended way of installing Gravel is via. [Composer](http://getcomposer.org). To install using Composer type the following command at the console:
+The recommended way of installing Gravel is via. [Composer](http://getcomposer.org); To install using Composer type the following command at the console:
 
 ```shell
 composer require ballen/gravel
