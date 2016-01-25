@@ -49,10 +49,11 @@ If you have installed the library using Composer or manually you can (as long as
 use Ballen\Gravel\Gravatar;
 
 $avatar = new Gravatar('bobbyallen.uk@gmail.com');
-$avatar->setSize(200); // Optionally default a 200x200px avatar instead of the default 120x120px
+$avatar->setSize(100); // We want a 100x100px sized avatar instead of the default 120x120px
 
 /**
-* You can then obtain the avatar URL by using the buildGravatarUrl() method or utilsing the magic of the __toString() class method like so:
+* You can then obtain the avatar URL either by using the buildGravatarUrl() method or utilising
+* the __toString() class method like so:
 */
 <image src="<?php echo $avatar; ?>">
 ```

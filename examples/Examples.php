@@ -19,8 +19,8 @@ echo sprintf('<img src="%s">', $example1);
  */
 $example2 = new Gravatar();
 $example2->setEmail('bobbyallen.uk@gmail.com') // You can optionally set (or overide) the username here instead of using the class constructor as per the first example.
-    ->setDefaultAvatar('mm') // If the avatar does not exist, we'll output a predefined default type.
-    ->setRating('x') // Optionally set the rating type that we'll allow
+    ->setDefaultAvatar(Gravatar::DEFAULT_IDENTICON) // If the avatar does not exist, we'll output a predefined default type.
+    ->setRating(Gravatar::RATING_PG) // Optionally set the rating type that we'll allow
     ->setUseHTTP() // We choose to use HTTP instead of the default HTTPS!
     ->setSize(220); // Don't want the default 120px? - No problem, we'll request the 220px by 220px version instead...
 echo sprintf('<img src="%s">', $example2->buildGravatarUrl());
@@ -29,7 +29,7 @@ echo sprintf('<img src="%s">', $example2->buildGravatarUrl());
  * An example of an invalid email address using a pre-set default Gravatar avatar:
  */
 $example3 = new Gravatar('fakeemail@bobbyallen.me');
-$example3->setDefaultAvatar('retro');
+$example3->setDefaultAvatar(Gravatar::AVATAR_RETRO);
 echo sprintf('<img src="%s">', $example3->buildGravatarUrl());
 
 /**

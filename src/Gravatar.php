@@ -28,6 +28,72 @@ class Gravatar
     const HTTPS_GRAVATAR_URL = 'https://secure.gravatar.com/';
 
     /**
+     * Instructs not to load any image if none is associated with the email hash, instead return an HTTP 404 (File Not Found) response.
+     * @see https://en.gravatar.com/site/implement/images/
+     */
+    const DEFAULT_404 = "404";
+
+    /**
+     * A simple, cartoon-style silhouetted outline of a person "Mystery-man" (does not vary by email hash)
+     * @see https://en.gravatar.com/site/implement/images/
+     */
+    const DEFAULT_MYSTERYMAN = "mm";
+
+    /**
+     * A geometric pattern based on an email hash
+     * @see https://en.gravatar.com/site/implement/images/
+     */
+    const DEFAULT_IDENTICON = "identicon";
+
+    /**
+     * A generated 'monster' with different colors, faces, etc
+     * @see https://en.gravatar.com/site/implement/images/
+     */
+    const DEFAULT_MONSTER = "monsterid";
+
+    /**
+     * Generated faces with differing features and backgrounds
+     * @see https://en.gravatar.com/site/implement/images/
+     */
+    const DEFAULT_WAVATAR = "wavatar";
+
+    /**
+     * Awesome generated, 8-bit arcade-style pixelated faces
+     * @see https://en.gravatar.com/site/implement/images/
+     */
+    const DEFAULT_RETRO = "retro";
+
+    /**
+     * A transparent PNG image (border added to HTML below for demonstration purposes)
+     * @see https://en.gravatar.com/site/implement/images/
+     */
+    const DEFAULT_BLANK = "blank";
+
+    /**
+     * Suitable for display on all websites with any audience type.
+     * @see https://en.gravatar.com/site/implement/images/
+     */
+    const RATING_G = 'g';
+
+    /**
+     * May contain rude gestures, provocatively dressed individuals, the lesser swear words, or mild violence.
+     * @see https://en.gravatar.com/site/implement/images/
+     */
+    const RATING_PG = 'pg';
+
+    /**
+     * May contain such things as harsh profanity, intense violence, nudity, or hard drug use.
+     * @see https://en.gravatar.com/site/implement/images/
+     */
+    const RATING_R = 'r';
+
+    /**
+     * May contain hardcore sexual imagery or extremely disturbing violence.
+     * @see https://en.gravatar.com/site/implement/images/
+     */
+    const RATING_X = 'x';
+
+    /**
      * The email address of which you want to return the Gravatar for.
      * @var string Email address for the user to return the Gravatar for.
      */
@@ -44,13 +110,13 @@ class Gravatar
      * the rating threshold or when no gravar is found for the user.
      * @var string Default gravatar image.
      */
-    private $default_avatar = '404';
+    private $default_avatar = self::DEFAULT_404;
 
     /**
      * Set the threshold of the Gravatar image.
      * @var string Rating setting. (Default is set to 'g')
      */
-    private $rating = 'g';
+    private $rating = self::RATING_G;
 
     /**
      * Enable Gravatar URL over HTTPS (good for sites using HTTPS!)
