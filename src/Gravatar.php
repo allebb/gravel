@@ -86,7 +86,7 @@ class Gravatar
      */
     public function setEmail($email)
     {
-        $this->email = (string) trim(strtolower($email));
+        $this->email = trim(strtolower($email));
         return $this;
     }
 
@@ -118,7 +118,7 @@ class Gravatar
      */
     public function setDefaultAvatar($option)
     {
-        $this->default_avatar = (string) $option;
+        $this->default_avatar = $option;
         return $this;
     }
 
@@ -135,7 +135,7 @@ class Gravatar
      */
     public function setRating($rating)
     {
-        $this->rating = (string) $rating;
+        $this->rating = $rating;
         return $this;
     }
 
