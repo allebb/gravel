@@ -10,7 +10,7 @@ use Ballen\Gravel\Facades\GravatarMapper;
  *
  * Gravatar Mapper provides a binding/class method aliases for Laravel to provide friendly syntax.
  *
- * @author ballen@bobbyallen.me (Bobby Allen)
+ * @author Bobby Allen <ballen@bobbyallen.me>
  * @license http://opensource.org/licenses/MIT
  * @link https://github.com/bobsta63/gravel
  * @link http://www.bobbyallen.me

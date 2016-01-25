@@ -7,7 +7,7 @@ namespace Ballen\Gravel;
  *
  * Gravel is a PHP library which provides easy access to get and display Gravatars.
  *
- * @author ballen@bobbyallen.me (Bobby Allen)
+ * @author Bobby Allen <ballen@bobbyallen.me>
  * @license http://opensource.org/licenses/MIT
  * @link https://github.com/bobsta63/gravel
  * @link http://www.bobbyallen.me
