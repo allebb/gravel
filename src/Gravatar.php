@@ -60,10 +60,14 @@ class Gravatar
 
     /**
      * Class constructor.
+     * @param string $email Optionally construct the object with the email address.
+     * @return void
      */
-    public function __construct()
+    public function __construct($email = null)
     {
-        
+        if (!is_null($email)) {
+            $this->setEmail($email);
+        }
     }
 
     /**
@@ -171,14 +175,14 @@ class Gravatar
         } else {
             $rating = '';
         }
-        return (string) $first_segment . 'avatar/' . $this->generateAddressHash() . '?s=' . $this->size . '&r=' . $this->rating . '&d=' . $this->default_avatar . '' . $rating;
+        return $first_segment . 'avatar/' . $this->generateAddressHash() . '?s=' . $this->size . '&r=' . $this->rating . '&d=' . $this->default_avatar . '' . $rating;
     }
 
     /**
-     * @deprecated since 1.1.0
-     * @return string The URL to the Gravatar Image.
+     * Returns the Gravar URL of the current instance.
+     * @return string
      */
-    public function buildImageURL()
+    public function __toString()
     {
         return $this->buildGravatarUrl();
     }
