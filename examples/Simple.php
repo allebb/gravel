@@ -1,7 +1,5 @@
 <?php
-
 require '../src/Ballen/Gravel/Gravatar.php';
-
 use Ballen\Gravel\Gravatar;
 
 /**
@@ -20,4 +18,4 @@ $mygravatar->setEmail('bobbyallen.uk@gmail.com')
     ->setUseHTTPS()
     ->setSize(220);
 
-echo "<img src=\"" . $mygravatar->buildGravatarURL() . "\">";
+echo "<img src=\"" . $mygravatar->buildGravatarUrl() . "\">";
