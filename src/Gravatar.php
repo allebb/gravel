@@ -231,17 +231,11 @@ class Gravatar
      */
     public function buildGravatarUrl()
     {
-        if ($this->secure == true) {
-            $first_segment = self::HTTPS_GRAVATAR_URL;
-        } else {
-            $first_segment = self::HTTP_GRAVATAR_URL;
+        $base_url = self::HTTPS_GRAVATAR_URL;
+        if (!$this->secure) {
+            $base_url = self::HTTP_GRAVATAR_URL;
         }
-        if ($this->rating != null) {
-            $rating = '&r=' . $this->rating;
-        } else {
-            $rating = '';
-        }
-        return $first_segment . 'avatar/' . $this->generateAddressHash() . '?s=' . $this->size . '&r=' . $this->rating . '&d=' . $this->default_avatar . '' . $rating;
+        return $base_url . 'avatar/' . $this->generateAddressHash() . '?s=' . $this->size . '&r=' . $this->rating . '&d=' . $this->default_avatar;
     }
 
     /**
