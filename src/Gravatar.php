@@ -127,7 +127,6 @@ class Gravatar
     /**
      * Class constructor.
      * @param string $email Optionally construct the object with the email address.
-     * @return void
      */
     public function __construct($email = null)
     {
