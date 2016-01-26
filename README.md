@@ -27,7 +27,7 @@ composer require ballen/gravel
 Alternately you can add it to your ``composer.json`` file manually in the `require` section like so:
 
 ```php
-"ballen/gravel": "^1.2"
+"ballen/gravel": "^2.0"
 ```
 Then install the package by running the ``composer update ballen/gravel`` command.
 
