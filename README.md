@@ -74,6 +74,8 @@ $avatar->setSize(100); // We want a 100x100px sized avatar instead of the defaul
 <image src="<?php echo $avatar; ?>">
 ```
 
+There are a number of other "commented" examples on how you can utilise this library can be found in the ``examples/Examples.php`` file.
+
 ### Laravel example
 
 I decided to implement a Laravel type style (`make()`, `get()`) for the Laravel Facades therefore it should keep both the hardcore developers (setter and getter prefixed methods) as well as those developers that appreciate cleanly written method names!
