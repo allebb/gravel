@@ -1,6 +1,13 @@
 Gravel
 ======
 
+[![Build Status](https://travis-ci.org/bobsta63/gravel.svg)](https://travis-ci.org/bobsta63/gravel)
+[![Code Coverage](https://scrutinizer-ci.com/g/bobsta63/gravel/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/bobsta63/gravel/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bobsta63/gravel/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bobsta63/gravel/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/ballen/gravel/v/stable)](https://packagist.org/packages/ballen/gravel)
+[![Latest Unstable Version](https://poser.pugx.org/ballen/gravel/v/unstable)](https://packagist.org/packages/ballen/gravel)
+[![License](https://poser.pugx.org/ballen/gravel/license)](https://packagist.org/packages/ballen/gravel)
+
 [Gravel](https://github.com/bobsta63/gravel) is a PHP library for working with [Gravatar](http://www.gravatar.com) avatars.
 
 Gravel is written and maintained by [Bobby Allen](http://bobbyallen.me), the library is licensed under the [MIT license](LICENSE).
