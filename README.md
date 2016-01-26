@@ -12,11 +12,20 @@ Gravel
 
 Gravel is written and maintained by [Bobby Allen](http://bobbyallen.me), the library is licensed under the [MIT license](LICENSE).
 
-## Requirements
+Requirements
+------------
 
-* PHP >= 5.3.0
+This library is developed and tested for PHP 5.3+
 
-## Installation
+This library is unit tested against PHP 5.3, 5.4, 5.5, 5.6, HHVM and 7.0!
+
+License
+-------
+
+This client library is released under the MIT license, a [copy of the license](https://github.com/bobsta63/gravel/blob/master/LICENSE) is provided in this package.
+
+Installation
+------------
 
 The recommended way of installing Gravel is via. [Composer](http://getcomposer.org); To install using Composer type the following command at the console:
 
@@ -45,10 +54,10 @@ In the `$providers` array add the service providers for this package.
 Ballen\Gravel\GravelServiceProvider::class,
 ```
 
-
 The Gravatar package will now be autoloaded by the Laravel framework (via. Composer) and use of the library is as simple...
 
-## Example usage
+Example usage
+-------------
 
 If you have installed the library using Composer or manually you can (as long as your application already `requires` or `includes` the composer `autoload.php`) then you can instantiate a new object instance and use it immediately in your application like so:
 
@@ -81,3 +90,32 @@ return view('userprofile')
     ->with('gravatar', Gravatar::make('bobbyallen.uk@gmail.com')->size(200)->get());
 
 ```
+
+Tests and coverage
+------------------
+
+This library is fully unit tested using [PHPUnit](https://phpunit.de/).
+
+I use [TravisCI](https://travis-ci.org/) for continuous integration, which triggers tests for PHP 5.3, 5.4, 5.5, 5.6, 7.0 and HHVM every time a commit is pushed.
+
+If you wish to run the tests yourself you should run the following:
+
+```shell
+# Install the Collection Library with the 'development' packages this then includes PHPUnit!
+composer install --dev
+
+
+# Now we run the unit tests (from the root of the project) like so:
+./vendor/bin/phpunit
+```
+
+Code coverage can also be ran and a report generated (this does require XDebug to be installed)...
+
+```shell
+./vendor/bin/phpunit --coverage-html ./report
+```
+
+Support
+-------
+
+I am happy to provide support via. my personal email address, so if you need a hand drop me an email at: [ballen@bobbyallen.me]().
