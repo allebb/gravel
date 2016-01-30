@@ -103,7 +103,7 @@ I use [TravisCI](https://travis-ci.org/) for continuous integration, which trigg
 If you wish to run the tests yourself you should run the following:
 
 ```shell
-# Install the Collection Library with the 'development' packages this then includes PHPUnit!
+# Install the Gravel Library with the 'development' packages this then includes PHPUnit!
 composer install --dev
 
 
