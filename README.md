@@ -4,6 +4,7 @@ Gravel
 [![Build Status](https://travis-ci.org/allebb/gravel.svg)](https://travis-ci.org/allebb/gravel)
 [![Code Coverage](https://scrutinizer-ci.com/g/allebb/gravel/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/allebb/gravel/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/allebb/gravel/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/allebb/gravel/?branch=master)
+[![Code Climate](https://codeclimate.com/github/allebb/gravel/badges/gpa.svg)](https://codeclimate.com/github/allebb/gravel)
 [![Latest Stable Version](https://poser.pugx.org/ballen/gravel/v/stable)](https://packagist.org/packages/ballen/gravel)
 [![Latest Unstable Version](https://poser.pugx.org/ballen/gravel/v/unstable)](https://packagist.org/packages/ballen/gravel)
 [![License](https://poser.pugx.org/ballen/gravel/license)](https://packagist.org/packages/ballen/gravel)
