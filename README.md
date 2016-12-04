@@ -1,14 +1,14 @@
 Gravel
 ======
 
-[![Build Status](https://travis-ci.org/bobsta63/gravel.svg)](https://travis-ci.org/bobsta63/gravel)
-[![Code Coverage](https://scrutinizer-ci.com/g/bobsta63/gravel/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/bobsta63/gravel/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bobsta63/gravel/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bobsta63/gravel/?branch=master)
+[![Build Status](https://travis-ci.org/allebb/gravel.svg)](https://travis-ci.org/allebb/gravel)
+[![Code Coverage](https://scrutinizer-ci.com/g/allebb/gravel/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/allebb/gravel/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/allebb/gravel/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/allebb/gravel/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/ballen/gravel/v/stable)](https://packagist.org/packages/ballen/gravel)
 [![Latest Unstable Version](https://poser.pugx.org/ballen/gravel/v/unstable)](https://packagist.org/packages/ballen/gravel)
 [![License](https://poser.pugx.org/ballen/gravel/license)](https://packagist.org/packages/ballen/gravel)
 
-[Gravel](https://github.com/bobsta63/gravel) is a PHP library for working with [Gravatar](http://www.gravatar.com) avatars.
+[Gravel](https://github.com/allebb/gravel) is a PHP library for working with [Gravatar](http://www.gravatar.com) avatars.
 
 Gravel is written and maintained by [Bobby Allen](http://bobbyallen.me), the library is licensed under the [MIT license](LICENSE).
 
@@ -22,7 +22,7 @@ This library is unit tested against PHP 5.3, 5.4, 5.5, 5.6, HHVM and 7.0!
 License
 -------
 
-This client library is released under the MIT license, a [copy of the license](https://github.com/bobsta63/gravel/blob/master/LICENSE) is provided in this package.
+This client library is released under the MIT license, a [copy of the license](https://github.com/allebb/gravel/blob/master/LICENSE) is provided in this package.
 
 Installation
 ------------
@@ -40,7 +40,7 @@ Alternately you can add it to your ``composer.json`` file manually in the `requi
 ```
 Then install the package by running the ``composer update ballen/gravel`` command.
 
-You can also manually download the latest version as a [zip](https://github.com/bobsta63/gravel/archive/master.zip) or [tar.gz](https://github.com/bobsta63/gravel/archive/master.tar.gz) archive of the library from GitHub and 'include' the `Gravatar.php` script (library) and use it standalone if you wish.
+You can also manually download the latest version as a [zip](https://github.com/allebb/gravel/archive/master.zip) or [tar.gz](https://github.com/allebb/gravel/archive/master.tar.gz) archive of the library from GitHub and 'include' the `Gravatar.php` script (library) and use it standalone if you wish.
 
 ### Laravel 4 and 5 Integration
 
