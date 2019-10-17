@@ -1,5 +1,5 @@
 <?php
-use \PHPUnit_Framework_TestCase;
+
 use Ballen\Gravel\Gravatar;
 
 /**
