@@ -18,7 +18,7 @@ Requirements
 
 This library is developed and tested for PHP 5.3+
 
-This library is unit tested against PHP 5.3, 5.4, 5.5, 5.6, HHVM and 7.0!
+This library is unit tested against PHP 5.6, 7.0, 7.1, 7.2, 7.3 and 7.4!
 
 License
 -------
@@ -39,13 +39,13 @@ Alternately you can add it to your ``composer.json`` file manually in the `requi
 ```php
 "ballen/gravel": "^2.0"
 ```
-Then install the package by running the ``composer update ballen/gravel`` command.
+Then install the package by running the ``composer install`` command.
 
 You can also manually download the latest version as a [zip](https://github.com/allebb/gravel/archive/master.zip) or [tar.gz](https://github.com/allebb/gravel/archive/master.tar.gz) archive of the library from GitHub and 'include' the `Gravatar.php` script (library) and use it standalone if you wish.
 
 ### Laravel 4 and 5 Integration
 
-Gravel has optional support for [Laravel](http://www.laravel.com) 4.x and 5.x and comes with a **Service Provider** which will register the **Facade** for easy integration.
+Gravel has optional support for [Laravel](http://www.laravel.com) 4.x, 5.x and 6.x; it comes with a **Service Provider** which will register the **Facade** for easy integration.
 
 Open your Laravel application configuration file ``config/app.php`` (or ``app/config/app.php`` if you are using Laravel 4.x)and add the following lines.
 
@@ -88,7 +88,7 @@ If you have added the Laravel Service Provider and Aliases as documented above, 
 return View::make('userprofile')
     ->with('gravatar', Gravatar::make('bobbyallen.uk@gmail.com')->size(200)->get());
 
-# Laravel 5.x example (using the view() helper method)
+# Laravel 5.x and 6.x example (using the view() helper method)
 return view('userprofile')
     ->with('gravatar', Gravatar::make('bobbyallen.uk@gmail.com')->size(200)->get());
 
@@ -99,13 +99,13 @@ Tests and coverage
 
 This library is fully unit tested using [PHPUnit](https://phpunit.de/).
 
-I use [TravisCI](https://travis-ci.org/) for continuous integration, which triggers tests for PHP 5.3, 5.4, 5.5, 5.6, 7.0 and HHVM every time a commit is pushed.
+I use [TravisCI](https://travis-ci.org/) for continuous integration, which triggers tests for PHP 5.6, 7.0, 7.1, 7.2, 7.3 and 7.4 every time a commit is pushed.
 
 If you wish to run the tests yourself you should run the following:
 
 ```shell
 # Install the Gravel Library with the 'development' packages this then includes PHPUnit!
-composer install --dev
+composer install
 
 
 # Now we run the unit tests (from the root of the project) like so:
