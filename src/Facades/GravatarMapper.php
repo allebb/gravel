@@ -73,7 +73,7 @@ class GravatarMapper
     /**
      * Set the rating threshold, will not return a Gravatar unless its in this band.
      * Valid options are ('g' is default!)
-     * 
+     *
      * 'g' : suitable for display on all websites with any audience type.
      * 'pg': may contain rude gestures, provocatively dressed individuals, the lesser swear words, or mild violence.
      * 'r' : may contain such things as harsh profanity, intense violence, nudity, or hard drug use.
