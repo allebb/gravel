@@ -125,6 +125,12 @@ class Gravatar
     private $secure = true;
 
     /**
+     * Override the generated Gravatar URL with a custom one.
+     * @var null|string Custom avatar URL
+     */
+    private $overrideAvatarUrl = null;
+
+    /**
      * Class constructor.
      * @param string $email Optionally construct the object with the email address.
      */
@@ -147,7 +153,7 @@ class Gravatar
     /**
      * Set sthe email address for the person.
      * @param string $email The Email address of the Gravatar account.
-     * @return \Ballen\Gravel\Gravatar
+     * @return Gravatar
      */
     public function setEmail($email)
     {
@@ -158,11 +164,11 @@ class Gravatar
     /**
      * Set the avatar size you would like to get back.
      * @param int $size The size of the Gravatar to get back. (Default is 120)
-     * @return \Ballen\Gravel\Gravatar
+     * @return Gravatar
      */
     public function setSize($size = 120)
     {
-        $this->size = (int) $size;
+        $this->size = (int)$size;
         return $this;
     }
 
@@ -179,7 +185,7 @@ class Gravatar
      * 'retro'    : awesome generated, 8-bit arcade-style pixelated faces
      * 'blank'    : a transparent PNG image (border added to HTML below for demonstration purposes)
      * @param string $option The prefix of the default avatar to return if no valid Gravatar is found for the supplied email address.
-     * @return \Ballen\Gravel\Gravatar
+     * @return Gravatar
      */
     public function setDefaultAvatar($option)
     {
@@ -190,13 +196,13 @@ class Gravatar
     /**
      * Set the rating threshold, will not return a Gravatar unless its in this band.
      * Valid options are ('g' is default!)
-     * 
+     *
      * 'g' : suitable for display on all websites with any audience type.
      * 'pg': may contain rude gestures, provocatively dressed individuals, the lesser swear words, or mild violence.
      * 'r' : may contain such things as harsh profanity, intense violence, nudity, or hard drug use.
      * 'x' : may contain hardcore sexual imagery or extremely disturbing violence.
      * @param string $rating
-     * @return \Ballen\Gravel\Gravatar
+     * @return Gravatar
      */
     public function setRating($rating)
     {
@@ -206,7 +212,7 @@ class Gravatar
 
     /**
      * Set the protocol to be used for the image URL to HTTPS.
-     * @return \Ballen\Gravel\Gravatar
+     * @return Gravatar
      */
     public function setUseHTTPS()
     {
@@ -216,7 +222,7 @@ class Gravatar
 
     /**
      * Set the protocol to be used for the image URL to HTTP.
-     * @return \Ballen\Gravel\Gravatar
+     * @return Gravatar
      */
     public function setUseHTTP()
     {
@@ -225,11 +231,27 @@ class Gravatar
     }
 
     /**
+     * Overrides the generated Gravatar with a custom avatar URL.
+     * @param string $url
+     * @return Gravatar
+     */
+    public function setCustomAvatarUrl($url)
+    {
+        $this->overrideAvatarUrl = $url;
+        return $this;
+    }
+
+    /**
      * Builds and returns the final Gravatar URL.
-     * @return string The URL to the Gravatar Image.
+     * @return string The URL to the Gravatar or Custom Avatar Image.
      */
     public function buildGravatarUrl()
     {
+
+        if ($this->overrideAvatarUrl) {
+            return $this->overrideAvatarUrl;
+        }
+
         $base_url = self::HTTPS_GRAVATAR_URL;
         if (!$this->secure) {
             $base_url = self::HTTP_GRAVATAR_URL;

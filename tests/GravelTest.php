@@ -1,6 +1,9 @@
 <?php
 
+namespace Ballen\Gravel\Tests;
+
 use Ballen\Gravel\Gravatar;
+use PHPUnit_Framework_TestCase;
 
 /**
  * GravelMapper

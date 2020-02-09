@@ -43,7 +43,7 @@ Then install the package by running the ``composer install`` command.
 
 You can also manually download the latest version as a [zip](https://github.com/allebb/gravel/archive/master.zip) or [tar.gz](https://github.com/allebb/gravel/archive/master.tar.gz) archive of the library from GitHub and 'include' the `Gravatar.php` script (library) and use it standalone if you wish.
 
-### Laravel 4 and 5 Integration
+### Laravel Integration
 
 Gravel has optional support for [Laravel](http://www.laravel.com) 4.x, 5.x and 6.x; it comes with a **Service Provider** which will register the **Facade** for easy integration.
 
