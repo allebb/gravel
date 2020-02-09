@@ -248,7 +248,7 @@ class Gravatar
     public function buildGravatarUrl()
     {
 
-        if ($this->overrideAvatarUrl) {
+        if ($this->overrideAvatarUrl !== null) {
             return $this->overrideAvatarUrl;
         }
 
