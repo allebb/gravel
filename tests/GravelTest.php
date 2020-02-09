@@ -38,7 +38,8 @@ class GravelTest extends PHPUnit_Framework_TestCase
      */
     public function testSimpleAvatarRequest()
     {
-        return $this->assertEquals(Gravatar::HTTPS_GRAVATAR_URL . 'avatar/f4e4a981ae664a57e37616d5d15931d7?s=120&r=g&d=404', $this->getDefaultTestInstance());
+        $this->assertEquals(Gravatar::HTTPS_GRAVATAR_URL . 'avatar/f4e4a981ae664a57e37616d5d15931d7?s=120&r=g&d=404',
+            $this->getDefaultTestInstance());
     }
 
     /**
@@ -48,7 +49,8 @@ class GravelTest extends PHPUnit_Framework_TestCase
     {
         $instance = new Gravatar();
         $instance->setEmail(GravelTest::TEST_EMAIL_ADDRESS);
-        return $this->assertEquals(Gravatar::HTTPS_GRAVATAR_URL . 'avatar/f4e4a981ae664a57e37616d5d15931d7?s=120&r=g&d=404', $instance->buildGravatarUrl());
+        $this->assertEquals(Gravatar::HTTPS_GRAVATAR_URL . 'avatar/f4e4a981ae664a57e37616d5d15931d7?s=120&r=g&d=404',
+            $instance->buildGravatarUrl());
     }
 
     /**
@@ -58,7 +60,8 @@ class GravelTest extends PHPUnit_Framework_TestCase
     {
         $instance = $this->getDefaultTestInstance()
             ->setSize(300);
-        return $this->assertEquals(Gravatar::HTTPS_GRAVATAR_URL . 'avatar/f4e4a981ae664a57e37616d5d15931d7?s=300&r=g&d=404', $instance->buildGravatarUrl());
+        $this->assertEquals(Gravatar::HTTPS_GRAVATAR_URL . 'avatar/f4e4a981ae664a57e37616d5d15931d7?s=300&r=g&d=404',
+            $instance->buildGravatarUrl());
     }
 
     /**
@@ -68,7 +71,8 @@ class GravelTest extends PHPUnit_Framework_TestCase
     {
         $instance = $this->getDefaultTestInstance()
             ->setDefaultAvatar(Gravatar::DEFAULT_WAVATAR);
-        return $this->assertEquals(Gravatar::HTTPS_GRAVATAR_URL . 'avatar/f4e4a981ae664a57e37616d5d15931d7?s=120&r=g&d=wavatar', $instance->buildGravatarUrl());
+        $this->assertEquals(Gravatar::HTTPS_GRAVATAR_URL . 'avatar/f4e4a981ae664a57e37616d5d15931d7?s=120&r=g&d=wavatar',
+            $instance->buildGravatarUrl());
     }
 
     /**
@@ -78,7 +82,8 @@ class GravelTest extends PHPUnit_Framework_TestCase
     {
         $instance = $this->getDefaultTestInstance()
             ->setUseHTTP();
-        return $this->assertEquals(Gravatar::HTTP_GRAVATAR_URL . 'avatar/f4e4a981ae664a57e37616d5d15931d7?s=120&r=g&d=404', $instance->buildGravatarUrl());
+        $this->assertEquals(Gravatar::HTTP_GRAVATAR_URL . 'avatar/f4e4a981ae664a57e37616d5d15931d7?s=120&r=g&d=404',
+            $instance->buildGravatarUrl());
     }
 
     /**
@@ -88,7 +93,8 @@ class GravelTest extends PHPUnit_Framework_TestCase
     {
         $instance = $this->getDefaultTestInstance()
             ->setUseHTTPS();
-        return $this->assertEquals(Gravatar::HTTPS_GRAVATAR_URL . 'avatar/f4e4a981ae664a57e37616d5d15931d7?s=120&r=g&d=404', $instance->buildGravatarUrl());
+        $this->assertEquals(Gravatar::HTTPS_GRAVATAR_URL . 'avatar/f4e4a981ae664a57e37616d5d15931d7?s=120&r=g&d=404',
+            $instance->buildGravatarUrl());
     }
 
     /**
@@ -98,6 +104,21 @@ class GravelTest extends PHPUnit_Framework_TestCase
     {
         $instance = $this->getDefaultTestInstance()
             ->setRating(Gravatar::RATING_X);
-        return $this->assertEquals(Gravatar::HTTPS_GRAVATAR_URL . 'avatar/f4e4a981ae664a57e37616d5d15931d7?s=120&r=x&d=404', $instance->buildGravatarUrl());
+        $this->assertEquals(Gravatar::HTTPS_GRAVATAR_URL . 'avatar/f4e4a981ae664a57e37616d5d15931d7?s=120&r=x&d=404',
+            $instance->buildGravatarUrl());
+    }
+
+    /**
+     * Test that by adding a custom override that it returns that instead of the Gravatar URL.
+     */
+    public function testCustomAvatarUrlOverridesGravatarUrl()
+    {
+
+        $customAvatarUrl = "https://avatars1.githubusercontent.com/u/767628?s=460&v=4";
+
+        $instance = $this->getDefaultTestInstance()->setCustomAvatarUrl($customAvatarUrl);
+
+        $this->assertEquals((string)$instance, $customAvatarUrl);
+
     }
 }

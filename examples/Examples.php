@@ -38,3 +38,14 @@ echo sprintf('<img src="%s">', $example3->buildGravatarUrl());
 $example4 = new Gravatar('fakeemail@bobbyallen.me');
 $example4->setDefaultAvatar('http://blog.bobbyallen.me/wp-content/uploads/2016/01/custom-default-avatar.png');
 echo sprintf('<img src="%s">', $example4->buildGravatarUrl());
+
+/**
+ * You can add an optional avatar URL override (lets say your application allows a user to upload a custom avatar and stores the URL of it but by default your application will load the Gravatar, your code may look something like so)
+ */
+//$dbResultQuery = "SELECT username, email, custom_avatar_url FROM users WHERE id = :userId";
+$example5 = new Gravatar($dbResult['email']);
+if($dbResult['custom_avatar_url'] != null){
+    $example5->setCustomAvatarUrl($dbResult['custom_avatar_url']);
+}
+echo sprintf('<img src="%s">', $example5->buildGravatarUrl());
+
