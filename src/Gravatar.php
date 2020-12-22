@@ -9,7 +9,7 @@ namespace Ballen\Gravel;
  *
  * @author Bobby Allen <ballen@bobbyallen.me>
  * @license http://opensource.org/licenses/MIT
- * @link https://github.com/bobsta63/gravel
+ * @link https://github.com/allebb/gravel
  * @link http://www.bobbyallen.me
  *
  */
