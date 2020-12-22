@@ -7,10 +7,6 @@
         <include>
             <directory suffix=".php">./src</directory>
         </include>
-        <exclude>
-            <directory suffix=".php">/Facades/</directory>
-            <file>/GravelServiceProvider.php</file>
-        </exclude>
     </coverage>
     <testsuites>
         <testsuite name="Package Unit Tests">
