@@ -2,6 +2,8 @@
 
 namespace Ballen\Gravel\Facades;
 
+use Ballen\Gravel\Gravatar;
+
 /**
  * GravelMapper
  *
@@ -27,7 +29,7 @@ class GravatarMapper
      */
     public function __construct()
     {
-        $this->gravatar = new Ballen\Gravel\Gravatar();
+        $this->gravatar = new Gravatar();
     }
 
     /**
