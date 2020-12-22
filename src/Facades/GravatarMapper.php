@@ -22,6 +22,9 @@ class GravatarMapper
      */
     private $gravatar;
 
+    /**
+     * @codeCoverageIgnore
+     */
     public function __construct()
     {
         $this->gravatar = new Ballen\Gravel\Gravatar();
@@ -29,6 +32,7 @@ class GravatarMapper
 
     /**
      * Make the gravatar with the supplied email address.
+     * @codeCoverageIgnore
      * @param string $email The email address for the Gravatar.
      * @return Ballen\Gravel\Gravatar
      */
@@ -40,6 +44,7 @@ class GravatarMapper
 
     /**
      * Set a custom gravatar size, default is 120px.
+     * @codeCoverageIgnore
      * @param int $size Gravatar image size
      * @return Ballen\Gravel\Gravatar
      */
@@ -61,6 +66,7 @@ class GravatarMapper
      * 'wavatar'  : generated faces with differing features and backgrounds
      * 'retro'    : awesome generated, 8-bit arcade-style pixelated faces
      * 'blank'    : a transparent PNG image (border added to HTML below for demonstration purposes)
+     * @codeCoverageIgnore
      * @param string $option The prefix of the default avatar to return if no valid Gravatar is found for the supplied email address.
      * @return \Ballen\Gravel\Gravatar
      */
@@ -78,6 +84,7 @@ class GravatarMapper
      * 'pg': may contain rude gestures, provocatively dressed individuals, the lesser swear words, or mild violence.
      * 'r' : may contain such things as harsh profanity, intense violence, nudity, or hard drug use.
      * 'x' : may contain hardcore sexual imagery or extremely disturbing violence.
+     * @codeCoverageIgnore
      * @param string $rating
      * @return \Ballen\Gravel\Gravatar
      */
@@ -89,6 +96,7 @@ class GravatarMapper
 
     /**
      * Returns a HTTPS formatted URL instead, ideal for sites that implement HTTPS and do not wish to trigger SSL warnings regarding 'some content on this page is not encrytped'.
+     * @codeCoverageIgnore
      * @param boolean $enable Retreive HTTPS formatted Gravatar links?
      * @return \Ballen\Gravel\Gravatar
      */
@@ -103,6 +111,7 @@ class GravatarMapper
 
     /**
      * Builds and returns the final Gravatar URL.
+     * @codeCoverageIgnore
      * @return string The URL to the Gravatar Image.
      */
     public function get()

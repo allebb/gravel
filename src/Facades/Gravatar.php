@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Facade;
 class Gravatar extends Facade
 {
 
+    /**
+     * @codeCoverageIgnore
+     */
     protected static function getFacadeAccessor()
     {
         return 'gravatar';
