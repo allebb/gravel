@@ -38,9 +38,11 @@ You can also manually download the latest version as a [zip](https://github.com/
 
 ### Laravel Integration
 
-Gravel has optional support for [Laravel](http://www.laravel.com) 4.x, 5.x and 6.x; it comes with a **Service Provider** which will register the **Facade** for easy integration.
+Gravel has optional support for [Laravel](http://www.laravel.com) 4.x, 5.x, 6.x, 7.x and 8.x; it comes with a **Service Provider** which will register the **Facade** for easy integration.
 
-Open your Laravel application configuration file ``config/app.php`` (or ``app/config/app.php`` if you are using Laravel 4.x) and add the following lines.
+On Laravel 7.x and 8.x this will be auto-discovered and no need to add it to the ``config/app.php`` ``$providers`` array!
+
+If you are using an earlier version of Laravel you will need to manually enable this, which can be achieved by opening your Laravel application's configuration file ``config/app.php`` (or ``app/config/app.php`` if you are using Laravel 4.x) and add the following lines.
 
 In the `$providers` array add the service providers for this package.
 
