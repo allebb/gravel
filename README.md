@@ -1,8 +1,8 @@
 Gravel
 ======
 
-[![Build Status](https://travis-ci.org/allebb/gravel.svg)](https://travis-ci.org/allebb/gravel)
-[![Code Coverage](https://scrutinizer-ci.com/g/allebb/gravel/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/allebb/gravel/?branch=master)
+[![Build](https://github.com/allebb/gravel/workflows/build/badge.svg)](https://github.com/allebb/gravel/actions)
+[![Code Coverage](https://codecov.io/gh/allebb/gravel/branch/master/graph/badge.svg)](https://codecov.io/gh/allebb/gravel)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/allebb/gravel/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/allebb/gravel/?branch=master)
 [![Code Climate](https://codeclimate.com/github/allebb/gravel/badges/gpa.svg)](https://codeclimate.com/github/allebb/gravel)
 [![Latest Stable Version](https://poser.pugx.org/ballen/gravel/v/stable)](https://packagist.org/packages/ballen/gravel)
@@ -16,9 +16,9 @@ Gravel is written and maintained by [Bobby Allen](http://bobbyallen.me), the lib
 Requirements
 ------------
 
-This library is developed and tested for PHP 5.3+
+This library is developed and tested for PHP 7.3+
 
-This library is unit tested against PHP 5.6, 7.0, 7.1, 7.2, 7.3 and 7.4!
+This library is unit tested against PHP 7.3, 7.4 and 8.0!
 
 License
 -------
@@ -33,13 +33,6 @@ The recommended way of installing Gravel is via. [Composer](http://getcomposer.o
 ```shell
 composer require ballen/gravel
 ```
-
-Alternately you can add it to your ``composer.json`` file manually in the `require` section like so:
-
-```php
-"ballen/gravel": "^2.0"
-```
-Then install the package by running the ``composer install`` command.
 
 You can also manually download the latest version as a [zip](https://github.com/allebb/gravel/archive/master.zip) or [tar.gz](https://github.com/allebb/gravel/archive/master.tar.gz) archive of the library from GitHub and 'include' the `Gravatar.php` script (library) and use it standalone if you wish.
 
@@ -99,7 +92,7 @@ Tests and coverage
 
 This library is fully unit tested using [PHPUnit](https://phpunit.de/).
 
-I use [TravisCI](https://travis-ci.org/) for continuous integration, which triggers tests for PHP 5.6, 7.0, 7.1, 7.2, 7.3 and 7.4 every time a commit is pushed.
+I use [GitHub Actions](https://github.com/) for continuous integration, which triggers tests for PHP 7.3, 7.4 and 8.0 every time a commit is pushed.
 
 If you wish to run the tests yourself you should run the following:
 
