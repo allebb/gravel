@@ -3,7 +3,7 @@
 namespace Ballen\Gravel\Tests;
 
 use Ballen\Gravel\Gravatar;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * GravelMapper
@@ -16,7 +16,7 @@ use PHPUnit_Framework_TestCase;
  * @link http://www.bobbyallen.me
  *
  */
-class GravelTest extends PHPUnit_Framework_TestCase
+class GravelTest extends TestCase
 {
 
     /**
