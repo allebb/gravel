@@ -1,33 +1,46 @@
 {
-    "name": "ballen/gravel",
-    "description": "Gravel is a PHP library which provides easy access to get and display Gravatars.",
-    "keywords": ["gravatar", "avatar"],
-    "type": "library",
-    "homepage": "https://github.com/allebb/gravel",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Bobby Allen",
-            "email": "ballen@bobbyallen.me",
-            "homepage": "http://bobbyallen.me",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": ">=7.3.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9.0",
-        "illuminate/support": "^8.20"
-    },
-    "autoload": {
-        "psr-4": {
-            "Ballen\\Gravel\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Ballen\\Gravel\\Tests\\": "tests/"
-        }
+  "name": "ballen/gravel",
+  "description": "Gravel is a PHP library which provides easy access to get and display Gravatars.",
+  "keywords": [
+    "gravatar",
+    "avatar"
+  ],
+  "type": "library",
+  "homepage": "https://github.com/allebb/gravel",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bobby Allen",
+      "email": "ballen@bobbyallen.me",
+      "homepage": "http://bobbyallen.me",
+      "role": "Developer"
     }
+  ],
+  "require": {
+    "php": ">=7.3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0",
+    "illuminate/support": "^8.20"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ballen\\Gravel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ballen\\Gravel\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Ballen\\Gravel\\GravelServiceProvider"
+      ],
+      "aliases": {
+        "Gravatar": "Ballen\\Gravel\\Facades\\Gravatar"
+      }
+    }
+  }
 }

@@ -26,7 +26,7 @@ class GravelServiceProvider extends ServiceProvider
     {
         $this->app->bind(
             'gravatar',
-            function () {
+            function ($app) {
                 return new GravatarMapper();
             }
         );
