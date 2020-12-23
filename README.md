@@ -20,6 +20,8 @@ This library is developed and tested for PHP 7.3+
 
 This library is unit tested against PHP 7.3, 7.4 and 8.0!
 
+If you need to use an older version of PHP, you should instead install the 2.x version of this library (see below for details).
+
 License
 -------
 
@@ -28,13 +30,19 @@ This client library is released under the MIT license, a [copy of the license](h
 Installation
 ------------
 
-The recommended way of installing Gravel is via. [Composer](http://getcomposer.org); To install using Composer type the following command at the console:
+The recommended way of installing the latest version of Gravel is via. [Composer](http://getcomposer.org); To install using Composer type the following command at the console:
 
 ```shell
 composer require ballen/gravel
 ```
 
 You can also manually download the latest version as a [zip](https://github.com/allebb/gravel/archive/master.zip) or [tar.gz](https://github.com/allebb/gravel/archive/master.tar.gz) archive of the library from GitHub and 'include' the `Gravatar.php` script (library) and use it standalone if you wish.
+
+**If you need to use an older version of PHP, version 2.x.x supports PHP 5.3, 5.4, 5.5, 5.6, 7.0, 7.1 and 7.2, you can install this version using Composer with this command instead:**
+
+```shell
+composer require ballen/gravel ^2.0
+```
 
 ### Laravel Integration
 
